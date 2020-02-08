@@ -1,0 +1,7 @@
+{
+  "name": "khamkarpetrolium",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
