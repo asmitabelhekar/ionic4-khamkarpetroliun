@@ -1,0 +1,10 @@
+<div class="ConfirmMain">
+  <p class="ConfirmText">{{confirmationText}}</p>
+  <p *ngIf="sub_text != '' || sub_text != undefined" class="SubTextClass">{{sub_text}}</p>
+
+  <div class="buttons">
+      <h4 class="LoginButton"  value="Add" (click)="confirm(1)">{{button1}}</h4>&nbsp;&nbsp;&nbsp;
+      <h4 class="CancelButton"  value="Cancel" (click)="confirm(0)">{{button2}}</h4>&nbsp;&nbsp;&nbsp;
+     </div>
+
+</div>

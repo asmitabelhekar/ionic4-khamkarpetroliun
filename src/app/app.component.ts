@@ -3,6 +3,9 @@ import { Component } from '@angular/core';
 import { Platform, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { MatDialog } from '@angular/material';
+import { ConfirmationpopupPage } from './pages/confirmationpopup/confirmationpopup.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +20,8 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private menu: MenuController
+    private menu: MenuController,
+    private router : Router
   ) {
     this.sideMenu();
     this.initializeApp();
@@ -35,30 +39,52 @@ export class AppComponent {
     this.navigate =
     [
       {
-        title : "Customer",
-        url   : "/sites",
-        icon  : "home"
+        title : "Add Customer",
+        url   : "/addcustomer",
+        icon  : "person"
       },
       {
-        title : "Record",
-        url   : "/updateamountrecord",
-        icon  : "home"
+        title : "Customer List",
+        url   : "/home",
+        icon  : "person"
       },
       {
-        title : "About App",
-        url   : "/about-app",
+        title : "Update balance",
+        url   : "/updatebalancerecord",
         icon  : "chatboxes"
       },
       {
-        title : "Terms and Conditions",
-        url   : "/terms-conditions",
-        icon  : "contacts"
-      },
-      {
         title : "Log Out",
-        url   : "",
+        url   : "/login",
         icon  : "log-out"
       }
     ]
   }
+
+
+  logout() {
+
+    // let send_data = {};
+    // send_data['text'] = "Do you really want to logout ?";
+    // send_data['button2'] = "Cancel";
+    // send_data['button1'] = "Logout";
+
+    // const dialogRef = this.dialog.open(ConfirmationpopupPage, {
+    //   width: '450px',
+    //   data: send_data
+    // });
+
+    // dialogRef.afterClosed().subscribe(result => {
+
+    //   console.log("result", result);
+    //   if (result['is_success'] == 1) {
+    //     this.storage.remove('cepl_user_data').then(() => {
+
+    //       this.router.navigate(['login']);
+    //     })
+    //   }
+    // });
+
+  }
+
 }

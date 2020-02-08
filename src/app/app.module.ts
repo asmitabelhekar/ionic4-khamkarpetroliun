@@ -9,8 +9,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule } from '@angular/material'
+import { MatFormFieldModule, MatDialog } from '@angular/material'
 import { FlexLayoutModule } from '@angular/flex-layout'
+import { ConfirmationpopupPage } from './pages/confirmationpopup/confirmationpopup.page';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +22,9 @@ import { FlexLayoutModule } from '@angular/flex-layout'
      AppRoutingModule,
       BrowserAnimationsModule,
       MatFormFieldModule,
-      FlexLayoutModule
+      FlexLayoutModule,
+     
+      
     ],
   providers: [
     StatusBar,
