@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule, MatDialog } from '@angular/material'
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { ConfirmationpopupPage } from './pages/confirmationpopup/confirmationpopup.page';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +24,7 @@ import { ConfirmationpopupPage } from './pages/confirmationpopup/confirmationpop
       BrowserAnimationsModule,
       MatFormFieldModule,
       FlexLayoutModule,
-     
+     HttpClientModule
       
     ],
   providers: [

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { LoaderserviceService } from 'src/app/services/loaderservice.service';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +10,11 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private menu : MenuController,
-    private router : Router) {}
+  constructor(private menu: MenuController,
+    private router: Router,
+    private apiCall: LoaderserviceService) {
+    this.getList();
+  }
 
 
   openFirst() {
@@ -27,7 +31,19 @@ export class HomePage {
     this.menu.open('custom');
   }
 
-  nextPage(){
-this.router.navigate(['/addcustomer']);
+  nextPage() {
+    this.router.navigate(['/addcustomer']);
+  }
+
+  getList() {
+    let url = "http://www.mocky.io/v2/5e3fd41d3300004c00b04c7c";
+
+    this.apiCall.get(url).subscribe(MyResponse => 
+      {
+      alert("success response:" + JSON.stringify(MyResponse));
+    }, 
+    error => {
+      alert("Failure response: " + error);
+    })
   }
 }
