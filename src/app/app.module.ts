@@ -9,10 +9,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule, MatDialog } from '@angular/material'
+import { MatFormFieldModule, MatDialog, MatAutocompleteModule, MatInputModule } from '@angular/material'
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { ConfirmationpopupPage } from './pages/confirmationpopup/confirmationpopup.page';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { NgMatSearchBarModule } from 'ng-mat-search-bar';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,9 +26,19 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
       BrowserAnimationsModule,
       MatFormFieldModule,
       FlexLayoutModule,
-     HttpClientModule
+     HttpClientModule,
+     NgMatSearchBarModule,
+     MatAutocompleteModule,
+     MatFormFieldModule,
+     FormsModule,
+     ReactiveFormsModule,
+     MatInputModule
       
     ],
+    exports: [
+      MatFormFieldModule,
+      MatInputModule,
+        ],
   providers: [
     StatusBar,
     SplashScreen,

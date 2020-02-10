@@ -6,13 +6,18 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgMatSearchBarModule } from 'ng-mat-search-bar';
+import { MatAutocompleteModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
     IonicModule,
     FlexLayoutModule,
+    NgMatSearchBarModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
     RouterModule.forChild([
       {
         path: '',

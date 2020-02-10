@@ -12,9 +12,25 @@
 <ion-content>
   <div class="cl-name" fxLayout="row" fxLayoutAlign="space-around center">
     <label>name</label>
-
-    <label>name</label>
-
-    <label>name</label>
+    <label>mobile</label>
+    <label>address</label>
   </div>
+
+  <div style="width: 100%; height: 70px; border : 1px solid red">
+  <mat-search-bar style="width: 100%; height: 70px;"></mat-search-bar>
+  </div>
+
+    <mat-form-field class="example-full-width">
+      <input type="text"
+             placeholder="Pick one"
+             aria-label="Number"
+             matInput
+             [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  
 </ion-content>

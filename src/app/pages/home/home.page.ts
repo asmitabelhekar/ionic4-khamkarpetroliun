@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { LoaderserviceService } from 'src/app/services/loaderservice.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,7 @@ import { LoaderserviceService } from 'src/app/services/loaderservice.service';
 })
 export class HomePage {
 
+  options: string[] = ['One', 'Two', 'Three'];
   constructor(private menu: MenuController,
     private router: Router,
     private apiCall: LoaderserviceService) {
